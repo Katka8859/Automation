@@ -8,8 +8,8 @@ describe('03 Elements', () => {
         let paragraphsOfStory = browser.$$('section#pohadka p')  // najdi vsechny paragraphs pohadky O Budulinkovi
         let foxsInStory = browser.$("p*=lištičky")         // najdi paragraph, kde se vyskytuje slovo "lištičky"
         let imageOfStory = browser.$('.story-image')        // najdi ilustraci v pohadce o budulinkovi
-        let giveLikeButton = browser.$('#like-button.btn.btn-primary')      // najdi tlacitko "Dej like!" na konci pohadky
-        let likeCounter = browser.$('#lvlAwesome.badge.badge-primary')         // najdi pocitadlo pod pohadkou*/
+        let giveLikeButton = browser.$('#like-button')      // najdi tlacitko "Dej like!" na konci pohadky
+        let likeCounter = browser.$('#lvlAwesome')         // najdi pocitadlo pod pohadkou*/
 
         expect(headerOfStory).toHaveText('O Budulínkovi')       // overi se, ze element v promenne headerOfStory ma dany text
         expect(paragraphsOfStory).toBeElementsArrayOfSize(16)   // overi, ze pocet elementu v poli se rovna 16

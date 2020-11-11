@@ -19,13 +19,11 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
     browser.$('#addItem').click()
     browser.pause(500)
     let pridej = browser.$('//*[@src="images/cat.png"]')
-    
-
     expect(pridej).toBeVisible('src', 'https://automation.cervik.repl.co/images/cat.png')
-    
-  
+   
   })
 
+  
   it('pridej hodne kocek pomoci tlacitka pridej kocku',()=>{
     
     for (let i = 0; i < 5; i = i + 1) {
@@ -33,12 +31,10 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
       browser.$('#addItem').click()
       browser.pause(500)
     }
-      
       let obrazek = browser.$$('//*[@src="images/cat.png"]')
       expect(obrazek).toBeElementsArrayOfSize(5)
-      
-
   })
+  
   it('tlacitko odeber kocku',()=>{
     for (let i = 0; i < 5; i = i + 1) {
       
@@ -52,7 +48,6 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
     let obrazek2 = browser.$$('//*[@src="images/cat.png"]')
     expect(obrazek2).toBeElementsArrayOfSize(5-1)
     
-
   })
 
   it('tlacitko apokalypsa', ()=>{
@@ -68,17 +63,15 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
   })
 
  
-
   describe('na strance https://automation.cervik.repl.co/adding.html overuji, jestli funguje pocitadlo kocek', ()=>{
     it('pocitadlo-pridej kocku', ()=>{
       browser.$('#addItem').click()
       let pocitadlo = browser.$('#counter')
       browser.pause(500)
       expect(pocitadlo).toHaveText('1')
-      
-      
-
+    
     })
+    
     it('pocitadlo reaguje na odeber kocku', ()=>{
       browser.$('#addItem').click()
       browser.$('#removeItem').click()
@@ -114,6 +107,7 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
     })
     
   })
+  
   describe('na strance https://automation.cervik.repl.co/adding.html overuji, ze tlačítko odeber kocku a apokalypsa jsou aktivní jen, když je zobrazena aspoň jedna karta kočky', ()=>{
     it('tlacitko odeber kocku je aktivni až po pridani alespon jedne kocky', ()=>{
 
@@ -132,6 +126,7 @@ describe('na strance https://automation.cervik.repl.co/adding.html overuji zda f
     })
 
   });
+  
   describe('na strance https://automation.cervik.repl.co/adding.html overuji, ze tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky', ()=>{
     it('deaktivace tlacitka odeber kocku', ()=>{
       browser.$('#addItem').click()

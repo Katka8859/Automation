@@ -18,7 +18,6 @@ describe('03 Elements', () => {
         expect(imageOfStory).toHaveAttribute('src', 'https://automation.cervik.repl.co/images/budulinek.jpg')
 
 
-        //scrollIntoView zname - scrollni dolu, at vidis, co se deje
         likeCounter.scrollIntoView()
         for(let i= 0; i < 10; i = i +1) {
             // element, ktery jsme nasli na radku 12 a ted na nej klikame
@@ -26,6 +25,6 @@ describe('03 Elements', () => {
             browser.pause(500)
         }
 
-        expect(likeCounter).toHaveText('10') // overi, ze pocitadlo ukazuje spravnou hodnotu - 10*/
+        expect(likeCounter).toHaveText('10') 
     });
 });

@@ -18,7 +18,7 @@ const saveScreenshot = (name) => {
 
 
 describe('Secret number', () => {
-  beforeEach(() => { //muzes zmenit na beforeEach, pokud je potreba
+  beforeEach(() => { 
     browser.url('https://automation.cervik.repl.co/inputs.html')
   })
 
